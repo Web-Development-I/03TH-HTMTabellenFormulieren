@@ -1,14 +1,21 @@
 /* nodig omdat input type=text en select en textarea even breed zouden zijn */
-* {
+
+html {
   box-sizing: border-box;
 }
 
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
 body {
-  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 form {
-  width: 50%;
+  inline-size: 50%;
 }
 
 fieldset {
@@ -26,14 +33,14 @@ label,
   color: #395870;
   font-weight: bold;
   display: block;
-  margin-bottom: 5px;
+  margin-block-end: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="date"],
-input[type="password"],
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='date'],
+input[type='password'],
 input[list],
 textarea,
 select {
@@ -43,25 +50,25 @@ select {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
   color: #636466;
   padding: 6px;
-  width: 100%;
-  margin-bottom: 10px;
+  inline-size: 100%;
+  margin-block-end: 10px;
 }
 
-input[type="radio"] + label,
-input[type="checkbox"] + label {
+input[type='radio'] + label,
+input[type='checkbox'] + label {
   font-weight: normal;
-  display: inline-block;
-  width: 100px;
+  display: inline flow-root;
+  inline-size: 100px;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background: linear-gradient(#49708f, #293f50);
   border: none;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   padding: 15px;
-  width: 100%;
+  inline-size: 100%;
 }
